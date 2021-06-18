@@ -1,0 +1,114 @@
+@import "./constants";
+
+.search-engine-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.search-engine-form {
+    width: 100%;
+}
+
+.search-engine-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+i.fa-search {
+    position: absolute;
+    right: 0.5em;
+    top: calc(50% - 0.5em);
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.search-engine-input {
+    border: 3px solid $black_color;
+    border-radius: 100px;
+    padding: 20px;
+    width: 100%;
+    font-size: 28px;
+    color: $black_color;
+    background-color: rgba(255, 255, 255, 0.6);
+
+    &:focus {
+        outline: none;
+        background-color: $white_color;
+    }
+}
+
+.card-item {
+    position: relative;
+    margin: 20px 8px;
+    padding: 20px;
+    width: 400px;
+    height: fit-content;
+    background-color: rgba(108, 122, 137, 0.2);
+    overflow: hidden;
+
+    & > img {
+        width: 100%;
+        max-height: 250px;
+        cursor: pointer;
+    }
+
+    & > .card-tags-container {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+        font-size: 20px;
+        padding: 2px 4px;
+        font-family: $fontOpenSans;
+        font-weight: bold;
+    }
+}
+.card-tags {
+    width: fit-content;
+    margin-left: 2%;
+
+    & > p {
+        text-align: left;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-family: $fontOpenSans;
+        font-weight: normal;
+    }
+}
+
+.active-img-container {
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    z-index: 1;
+    background-color: rgba(108, 122, 137, 0.9);
+    width: 100vw;
+    height: 100%;
+    overflow: hidden;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+}
+
+.active-img-card {
+    width: 80%;
+    height: 80%;
+    background-color: $white_color;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    // align-items: center;
+}
+
+.active-img {
+    width: 70%;
+    height: 60%;
+    border-radius: 10px;
+}
