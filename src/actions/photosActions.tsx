@@ -12,7 +12,7 @@ const getPhotos =
         unsplashApi.search
             .getPhotos({
                 query: query,
-                page: 1,
+                page: Math.floor(Math.random() * 5),
                 perPage: 20,
                 orderBy: "relevant",
             })
@@ -23,7 +23,6 @@ const getPhotos =
                         payload: result.errors,
                     });
                 } else {
-                    console.log(result);
                     dispatch({
                         type: "SET_PHOTOS_SUCCESS",
                         payload: result.response.results,

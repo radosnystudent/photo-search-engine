@@ -6,6 +6,7 @@ interface Props {
     tags: [];
     imageActive: (src: string, alt: string) => void;
     full: string;
+    user: {};
 }
 
 interface Tags {
@@ -14,7 +15,7 @@ interface Tags {
     type: string;
 }
 
-const Card: React.FC<Props> = ({ src, alt, tags, imageActive, full }) => {
+const Card: React.FC<Props> = ({ src, alt, tags, imageActive, full, user }) => {
     return (
         <div className="card-item">
             <img onClick={() => imageActive(alt, full)} src={src} alt={alt} />
